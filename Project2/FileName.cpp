@@ -16,6 +16,11 @@ void InitArr(int* arr, int size)
 	}
 }
 
+void Delete(int* arr)
+{
+	delete[] arr;
+}
+
 int main()
 {
 	int size = 10;

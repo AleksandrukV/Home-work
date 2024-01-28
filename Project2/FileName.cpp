@@ -8,6 +8,14 @@ int* CreateArr(int size)
 	return arr;
 }
 
+void InitArr(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 11;
+	}
+}
+
 int main()
 {
 	int size = 10;

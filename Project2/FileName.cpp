@@ -30,8 +30,29 @@ void PrintArr(int* arr, int size)
 	cout << endl;
 }
 
+int FindIndex(int* arr, int size)
+{
+	int index=0;
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = 0; j < size; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				index = j;
+			}
+		}
+	}
+	return index;
+}
+
 int main()
 {
 	int size = 10;
 	int* arr = CreateArr(size);
+	InitArr(arr, size);
+	PrintArr(arr, size);
+	cout << "The index of the smallest number is " << FindIndex(arr, size) << endl;
+
+	Delete(arr);
 }
